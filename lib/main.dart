@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:mysample/LoginBody.dart';
-import 'package:mysample/SignupPage.dart';
 import 'package:mysample/welcome_screen.dart';
 
 
 // Import the firebase_core plugin
 import 'package:firebase_core/firebase_core.dart';
 
+//Entry point for every application
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(App());
 }
 
+
 class App extends StatefulWidget {
   _AppState createState() => _AppState();
 }
 
+
 class _AppState extends State<App> {
-  // Set default `_initialized` and `_error` state to false
   bool _initialized = false;
   bool _error = false;
 
@@ -37,12 +37,14 @@ class _AppState extends State<App> {
     }
   }
 
+  //initialization
   @override
   void initState() {
     initializeFlutterFire();
     super.initState();
   }
 
+  //build and show the home page
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -54,18 +56,5 @@ class _AppState extends State<App> {
     );
   }
 }
-
-// //OLD
-// void main() {
-//   runApp(
-//     MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: Scaffold(
-//           backgroundColor: Colors.white,
-//           body: HomePage()
-//           ),
-//     ),
-//   );
-// }
 
 
