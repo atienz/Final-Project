@@ -4,6 +4,8 @@ import 'package:mysample/RoundedButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mysample/SignupPage.dart';
 
+import 'checkAccount.dart';
+
 class Login extends StatefulWidget {
   @override
   _LoginState createState() => _LoginState();
@@ -142,6 +144,16 @@ class _LoginState extends State<Login> {
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                     ),
+                    AlreadyHaveAnAccountCheck(
+                        login: true,
+                        press: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) {
+                              return Login();
+                            }),
+                          );
+                        }),
                   ],
                 ),
               ),

@@ -158,7 +158,7 @@ class _StartPageState extends State<CalendarPage> {
           ),
           const SizedBox(height: 8.0),
           Expanded(
-            //to build the list of events for the day 
+            //to build the list of events for the day
             child: ValueListenableBuilder<List<Text>>(
               valueListenable: _selectedEvents,
               builder: (context, value, _) {
