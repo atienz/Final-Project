@@ -3,18 +3,22 @@ import 'package:mysample/LoginBody.dart';
 import 'package:mysample/RoundedButton.dart';
 import 'package:mysample/SignupPage.dart';
 
+//Class for building home page
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
+          //create white app bar
           AppBar(
             backgroundColor: Colors.white,
           ),
+          //display image
           Image(image: AssetImage('images/Home.png')),
           Padding(
             padding: const EdgeInsets.all(8.0),
+            //display header
             child: Text(
               'Welcome to SchoolDaze',
               style: TextStyle(
@@ -24,6 +28,7 @@ class HomePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
+          //display secondary text
           Text(
             '''
       Your hard-working app for the lazy college student.
@@ -31,6 +36,7 @@ class HomePage extends StatelessWidget {
             style: TextStyle(fontSize: 15),
             textAlign: TextAlign.center,
           ),
+          //display login button that redirects to login page when clicked
           RoundedButton(
               text: "LOGIN",
               color: Colors.indigo.shade300,
@@ -44,6 +50,7 @@ class HomePage extends StatelessWidget {
                   ),
                 );
               }),
+          //display sign up button that redirects to sign up page when clicked
           RoundedButton(
               text: "SIGN UP",
               color: Colors.red.shade300,
