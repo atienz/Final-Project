@@ -128,7 +128,7 @@ class _StartPageState extends State<CalendarPage> {
           TableCalendar<Text>(
             //set the first date available in the calendar to 1/1/2020
             firstDay: DateTime.utc(2020, 01, 01),
-            //set the last date available in the calendar to 11/1/2020
+            //set the last date available in the calendar to 11/1/2030
             lastDay: DateTime.utc(2030, 11, 01),
             //set the highlighted day to today
             focusedDay: _focusedDay,
